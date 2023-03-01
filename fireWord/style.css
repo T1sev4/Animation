@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 15);
+}
+.title {
+  text-align: center;
+  margin-top: 300px;
+  font-size: 200px;
+  text-transform: uppercase;
+  color: transparent;
+  font-family: Arial;
+  background-image: url(fire.jpeg);
+  background-size: contain;
+  -webkit-background-clip: text;
+  animation: fire 13s infinite;
+}
+
+@keyframes fire {
+  0% {
+    background-position: left 0 top 0;
+  }
+  50% {
+    background-position: left 150px top -25px;
+  }
+  100% {
+    background-position: left 300px top 0;
+  }
+}

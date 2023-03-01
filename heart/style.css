@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+.heart {
+  width: 200px;
+  height: 200px;
+  background-color: #a60400;
+  box-shadow: 10px 10px 90px #a60400;
+  position: relative;
+  animation: animation 0.6s infinite;
+}
+.heart::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  box-shadow: -10px 10px 90px #a60400;
+  top: -50%;
+  border-radius: 50%;
+  background-color: #a60400;
+}
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  box-shadow: 10px -10px 90px #a60400;
+  right: -50%;
+  border-radius: 50%;
+  background-color: #a60400;
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
